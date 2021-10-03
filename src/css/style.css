@@ -39,7 +39,7 @@ img {
 /* Navigation */
 .main-nav ul {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 0;
     padding: 0;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
@@ -68,5 +68,65 @@ img {
     grid-gap: 20px;
     grid-template-areas: 
     'showcase showcase top-box-t'
-    'showcase showcase top-box-b';
+    'showcase showcase top-box-b'; 
 }
+
+/* ShowCase */
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url();
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+}
+
+.showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+}
+
+/* top box */
+
+.top-box {
+    background: var(--light);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+/* for prices in services */
+.top-box .price {
+    font-size: 2.5rem;
+}
+
+.top-box-t {
+    grid-area: top-box-t;
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+}
+
+/* box section */
+
+.box-container {}
+
+/* info section */
+.info-container {}
+
+/* portfolio section */
+.portfolio-container {}
