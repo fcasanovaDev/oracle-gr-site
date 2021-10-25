@@ -154,16 +154,26 @@ h1, h2 {
 .box-container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "box_a box_a box_b box_b box_c box_c";
+    align-items: start;
+
 }
 
-.box {
-    background: var(--primary);
-    text-align: center;
-    padding: 1.5rem 2rem;
+.box_a {
+    display: grid;
+    grid-area: box_a;   
+    justify-content: center;
     box-shadow: var(--shadow);
 }
 
+.box_b {
+    grid-area: box_b;
+}
+.box_c {
+    grid-area: box_c;
+}
 /* info section */
 .info-container {
     background: var(--primary);
