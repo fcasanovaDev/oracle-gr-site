@@ -99,11 +99,13 @@ h1, h2 {
     'showcase showcase top-box-b'; 
 }
 
+
 /* ShowCase */
 .showcase {
     grid-area: showcase;
-    min-height: 400px;
+    min-height: 200px;
     background: url();
+    background-image: url("../images/left_Card_Display_Setup.jpg");
     background-size: cover;
     background-position: center;
     padding: 3rem;
@@ -174,13 +176,15 @@ h1, h2 {
 .box_c {
     grid-area: box_c;
 }
-/* info section */
-.info-container {
+/* Gallery section */
+.gallery-container {
     background: var(--primary);
     box-shadow: var(--shadow);
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, mimax(150px));
+
     padding: 3rem;
 }
 
@@ -194,6 +198,47 @@ h1, h2 {
 .portfolio-container img {
     width: 100%;
     box-shadow: var(--shadow);
+}
+
+ /* service */
+.top-container-services
+{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(2, 22vw);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: fit-content;
+    margin-left: 5%;
+    padding: 3rem;
+}
+
+.main-service-box
+{
+    grid-area: 1 / 1 / 6 / 5;
+    
+    background-image: url("../images/priceSheet.jpg");
+    background-size: cover;
+    background-position: center;
+    
+   
+    
+    box-shadow: var(--shadow);
+}
+    
+    /* .div1 { grid-area: 1 / 1 / 6 / 4; }
+    .div2 { grid-area: 1 / 4 / 3 / 6; } */
+    
+.right-box
+{
+    grid-area: 1 / 5 / 6 / 6; 
+    margin-top: 30px;
+    margin-left: 30px;
+
+    font-size: larger;
+    text-align: center;
 }
 
 /* footer */
