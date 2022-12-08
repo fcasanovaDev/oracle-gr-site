@@ -15,7 +15,9 @@ html {
 
 body {
     background: rgb(0, 0, 0);
-    margin: 30px 50px;
+    /* margin: 30px 50px; */
+    margin-left: 100px;
+    margin-right: 100px;
     line-height: 1.4;
 }
 
@@ -292,8 +294,11 @@ footer {
 .gallery-container
 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px));
-    grid-template-rows: repeat(4, 5vw);
+    background-color: blue;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 10vw);
+    grid-template-rows: repeat(2, 15vh);
 }  
 
 /* notes
@@ -306,12 +311,26 @@ grid area : grid-row-start / grid-column-start / grid-row-end / grid-column-end:
     grid-row-end: 3;
 }
 
+.gallery-item-1 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
 .gallery-item-2
 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.gallery-item-2 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .gallery-item-3
@@ -322,10 +341,24 @@ grid area : grid-row-start / grid-column-start / grid-row-end / grid-column-end:
     grid-row-end: 5;
 }
 
+.gallery-item-3 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
 .gallery-item-4
 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 5;
+}
+
+.gallery-item-4 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
