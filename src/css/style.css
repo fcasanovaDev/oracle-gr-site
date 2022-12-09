@@ -243,6 +243,20 @@ h1, h2 {
     text-align: center;
 }
 
+/* Top Contact section */
+.top-contact-container
+{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(2, 22vw);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: fit-content;
+    margin-left: 5%;
+    padding: 3rem;
+}
 /* footer */
 footer {
     margin-top: 2rem;
