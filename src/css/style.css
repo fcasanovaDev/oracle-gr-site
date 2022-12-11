@@ -257,6 +257,8 @@ h1, h2 {
     margin-left: 5%;
     padding: 3rem;
 }
+
+
 /* footer */
 footer {
     margin-top: 2rem;
@@ -265,6 +267,8 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+
 
 /* Media Queries */
 @media(max-width: 700px) {
@@ -308,7 +312,7 @@ footer {
 .gallery-container
 {
     display: grid;
-    background-color: blue;
+    background-color: #333;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(2, 10vw);
