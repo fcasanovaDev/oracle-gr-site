@@ -97,15 +97,15 @@ h1, h2 {
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
-    'showcase showcase top-box-t'
-    'showcase showcase top-box-b'; 
+    'showcase showcase top-box-t';
+    /* 'showcase showcase top-box-b';  */
 }
 
 
 /* ShowCase */
 .showcase {
     grid-area: showcase;
-    min-height: 200px;
+    min-height: 500px;
     background: url();
     background-image: url("../images/left_Card_Display_Setup.jpg");
     background-size: cover;
