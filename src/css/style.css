@@ -15,7 +15,9 @@ html {
 
 body {
     background: rgb(0, 0, 0);
-    margin: 30px 50px;
+    /* margin: 30px 50px; */
+    margin-left: 100px;
+    margin-right: 100px;
     line-height: 1.4;
 }
 
@@ -95,21 +97,23 @@ h1, h2 {
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
-    'showcase showcase top-box-t'
-    'showcase showcase top-box-b'; 
+    'showcase showcase top-box-t';
+    /* 'showcase showcase top-box-b';  */
 }
+
 
 /* ShowCase */
 .showcase {
     grid-area: showcase;
-    min-height: 400px;
+    min-height: 500px;
     background: url();
+    background-image: url("../images/left_Card_Display_Setup.jpg");
     background-size: cover;
     background-position: center;
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: top;
     justify-content: center;
     box-shadow: var(--shadow);
 }
@@ -122,10 +126,17 @@ h1, h2 {
 
 .showcase p {
     font-size: 1.3rem;
-    margin-top: 0;
+    margin-top: 75%;
     color: var(--light);
 }
 
+.showcase .btn {
+    width: 75px;
+    text-align: center;
+    align-items: center;
+
+    justify-content: center;
+}
 /* top box */
 
 .top-box {
@@ -145,6 +156,13 @@ h1, h2 {
     grid-area: top-box-t;
 }
 
+.top-box-t > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
 .top-box-b {
     grid-area: top-box-b;
 }
@@ -154,23 +172,35 @@ h1, h2 {
 .box-container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "box_a box_a box_b box_b box_c box_c";
+    align-items: start;
+
 }
 
-.box {
-    background: var(--primary);
-    text-align: center;
-    padding: 1.5rem 2rem;
+.box_a {
+    display: grid;
+    grid-area: box_a;   
+    justify-content: center;
     box-shadow: var(--shadow);
 }
 
-/* info section */
-.info-container {
+.box_b {
+    grid-area: box_b;
+}
+.box_c {
+    grid-area: box_c;
+}
+/* Gallery section */
+.gallery-container {
     background: var(--primary);
     box-shadow: var(--shadow);
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, mimax(150px));
+
     padding: 3rem;
 }
 
@@ -186,13 +216,77 @@ h1, h2 {
     box-shadow: var(--shadow);
 }
 
+ /* service */
+.top-container-services
+{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(2, 22vw);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: fit-content;
+    padding: 3rem;
+}
+
+.main-service-box
+{
+    grid-area: 1 / 1 / 6 / 5;
+    
+    background-image: url("../images/priceSheet.jpg");
+    background-size: cover;
+    background-position: center;
+    
+   
+    
+    box-shadow: var(--shadow);
+}
+    
+    /* .div1 { grid-area: 1 / 1 / 6 / 4; }
+    .div2 { grid-area: 1 / 4 / 3 / 6; } */
+    
+.right-box
+{
+    grid-area: 1 / 5 / 6 / 6; 
+    margin-top: 30px;
+    margin-left: 30px;
+
+    font-size: larger;
+    text-align: center;
+}
+
+/* Top Contact section */
+.top-contact-container
+{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(2, 22vw);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: fit-content;
+    padding: 3rem;
+}
+
+
 /* footer */
 footer {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
     background: var(--dark);
     color: var(--light);
     text-align: center;
     padding: 1rem;
+}
+
+.icon-ig
+{
+    margin-left: 10px;
+    max-height: 50px;
+    max-width: 50 px;
 }
 
 /* Media Queries */
@@ -237,8 +331,11 @@ footer {
 .gallery-container
 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px));
-    grid-template-rows: repeat(4, 5vw);
+    background-color: #333;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 10vw);
+    grid-template-rows: repeat(2, 15vh);
 }  
 
 /* notes
@@ -251,12 +348,26 @@ grid area : grid-row-start / grid-column-start / grid-row-end / grid-column-end:
     grid-row-end: 3;
 }
 
+.gallery-item-1 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
 .gallery-item-2
 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.gallery-item-2 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .gallery-item-3
@@ -267,10 +378,24 @@ grid area : grid-row-start / grid-column-start / grid-row-end / grid-column-end:
     grid-row-end: 5;
 }
 
+.gallery-item-3 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
 .gallery-item-4
 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 5;
+}
+
+.gallery-item-4 > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
