@@ -113,7 +113,7 @@ h1, h2 {
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: top;
     justify-content: center;
     box-shadow: var(--shadow);
 }
@@ -126,10 +126,17 @@ h1, h2 {
 
 .showcase p {
     font-size: 1.3rem;
-    margin-top: 0;
+    margin-top: 75%;
     color: var(--light);
 }
 
+.showcase .btn {
+    width: 75px;
+    text-align: center;
+    align-items: center;
+
+    justify-content: center;
+}
 /* top box */
 
 .top-box {
@@ -147,6 +154,13 @@ h1, h2 {
 
 .top-box-t {
     grid-area: top-box-t;
+}
+
+.top-box-t > img
+{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .top-box-b {
@@ -213,7 +227,6 @@ h1, h2 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: fit-content;
-    margin-left: 5%;
     padding: 3rem;
 }
 
@@ -254,7 +267,6 @@ h1, h2 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: fit-content;
-    margin-left: 5%;
     padding: 3rem;
 }
 
@@ -263,7 +275,7 @@ h1, h2 {
 footer {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 0;
     background: var(--dark);
     color: var(--light);
     text-align: center;
