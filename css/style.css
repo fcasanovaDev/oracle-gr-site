@@ -269,6 +269,14 @@ h1, h2 {
 }
 
 /* Top Contact section */
+.top-contact-flex-header
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: azure;
+}
+
 .top-contact-container
 {
     background: var(--primary);
@@ -282,7 +290,21 @@ h1, h2 {
     padding: 3rem;
 }
 
+.main-contact-box 
+{
+    grid-area: 1 / 1 / 3 / 4; 
+}
 
+.right-contact-box
+{
+    grid-area: 1 / 4 / 3 / 6;
+    padding: 10px;
+}
+.right-contact-box h2
+{
+    text-align: center;
+    justify-content: center;
+}
 /* footer */
 footer {
     display: flex;
