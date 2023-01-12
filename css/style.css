@@ -106,8 +106,8 @@ h1, h2 {
 .showcase {
     grid-area: showcase;
     min-height: 500px;
-    background: url();
-    background-image: url("../images/left_Card_Display_Setup.jpg");
+    /* background: url(); */
+    /* background-image: url("../images/left_Card_Display_Setup.jpg"); */
     background-size: cover;
     background-position: center;
     padding: 3rem;
@@ -301,6 +301,12 @@ h1, h2 {
     padding: 10px;
 }
 .right-contact-box h2
+{
+    text-align: center;
+    justify-content: center;
+}
+
+.right-contact-box p 
 {
     text-align: center;
     justify-content: center;
